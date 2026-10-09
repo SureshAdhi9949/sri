@@ -28,7 +28,7 @@ body {
   background: #B38827;
 }
 
-/* Luxury Typography Classes */
+/* Luxury Typography */
 .font-cinzel {
   font-family: 'Cinzel', serif;
 }
@@ -37,7 +37,7 @@ body {
   font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
-/* Creative Gold Shimmer Text */
+/* Crisp High-Performance Gold Gradient Text (Zero GPU Repaint) */
 .gold-text-gradient {
   background: linear-gradient(135deg, #7A551A 0%, #B38827 50%, #C8A33D 100%);
   -webkit-background-clip: text;
@@ -45,161 +45,46 @@ body {
 }
 
 .gold-shimmer-text {
-  background: linear-gradient(90deg, #7A551A 0%, #D4AF37 35%, #FFFFFF 50%, #D4AF37 65%, #7A551A 100%);
-  background-size: 200% auto;
+  background: linear-gradient(135deg, #7A551A 0%, #B38827 50%, #C8A33D 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shineText 4s linear infinite;
 }
 
-@keyframes shineText {
-  to {
-    background-position: 200% center;
-  }
-}
-
-/* Lightweight Hardware-Accelerated Animations */
-@keyframes floatGentle {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes floatGentleHorizontal {
-  0%, 100% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(4px, -6px);
-  }
-}
-
-@keyframes shimmerSweep {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
-  }
-}
-
-@keyframes pulseGoldGlow {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(179, 136, 39, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 0 10px rgba(179, 136, 39, 0);
-  }
-}
-
-@keyframes rotateSlow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-float {
-  animation: floatGentle 4.5s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-  animation: floatGentle 5s ease-in-out 1.8s infinite;
-}
-
-.animate-float-h {
-  animation: floatGentleHorizontal 6s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 2.2s infinite;
-}
-
-.animate-pulse-gold {
-  animation: pulseGoldGlow 2.5s infinite;
-}
-
-.animate-spin-slow {
-  animation: rotateSlow 20s linear infinite;
-}
-
-/* Button & Badge Light Sweep Reflection */
-.btn-shimmer {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.35s ease;
-}
-
-.btn-shimmer::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 40%;
-  height: 200%;
-  background: linear-gradient(
-    60deg,
-    rgba(255, 255, 255, 0) 20%,
-    rgba(255, 255, 255, 0.35) 50%,
-    rgba(255, 255, 255, 0) 80%
-  );
-  transform: rotate(25deg);
-  transition: all 0.75s ease-in-out;
-}
-
-.btn-shimmer:hover::after {
-  left: 140%;
-}
-
-/* Luxury Card Hover Micro-Interactions */
+/* Clean High-Performance Card */
 .card-luxury {
   background: #FFFFFF;
   border: 1px solid rgba(222, 211, 192, 0.7);
-  box-shadow: 0 4px 18px -4px rgba(12, 24, 41, 0.04);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.35s ease;
-  will-change: transform, box-shadow;
+  box-shadow: 0 4px 14px -4px rgba(12, 24, 41, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .card-luxury:hover {
-  transform: translateY(-5px);
-  border-color: rgba(179, 136, 39, 0.5);
-  box-shadow: 0 20px 38px -10px rgba(12, 24, 41, 0.1), 0 0 0 1px rgba(179, 136, 39, 0.25);
+  transform: translateY(-3px);
+  border-color: rgba(179, 136, 39, 0.45);
+  box-shadow: 0 12px 24px -6px rgba(12, 24, 41, 0.08);
 }
 
-/* Plot Card Hover Glow */
+/* Plot Card Hover */
 .plot-card {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.25s ease, 
-              border-color 0.25s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 .plot-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 20px -4px rgba(12, 24, 41, 0.12);
-  z-index: 10;
+  transform: scale(1.02);
 }
 
-/* Reveal On Scroll Utility */
+/* High Performance Button Shimmer on Hover Only */
+.btn-shimmer {
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-shimmer:hover {
+  transform: translateY(-1px);
+}
+
+/* Ultra Lightweight Scroll Reveal */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .reveal-on-scroll.is-visible {
